@@ -55,17 +55,51 @@ export class StudentList {
     }
 
     updateCourse(id: string, courseName: string) {
+        let student = this.students.find(element => element.studentId === id);
 
+        if (student) {
+            student.course = courseName;
+            return student;
+        }
+
+        return "Student id doesnt exists";
     }
 
     updateCollege(id: string, collegeName: string) {
+        let student = this.students.find(element => element.studentId === id);
 
+        if (student) {
+            student.college = collegeName;
+            return student;
     }
 
+}
     updateAddress(id: string, address: string) {
+        let student = this.students.find(element => element.studentId === id);
 
-    }
+        if (student) {
+            student.address = address;
+            return student;
+
+    }}
 
     // create method and return number of students
     // delete one student and return list of students, use splice method (index, 1)
+
+    deletestudent(id: string) {
+        let index = this.students.findIndex(element => element.studentId === id);
+
+        if (index > -1){
+            this.students.splice(index,1);
+            return "student has benn successfully deleted";
+            
+        }
+
+        return "student id doesnt exists"
+
+        
+    }
+    numberOfStudent() {
+        return this.students.length;
+        }
 }
