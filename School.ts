@@ -42,5 +42,5 @@ console.log(studentList.getStudents());
 // console.log(studentList.updateStudentName("2015-105869", "Michael Jordan"));
 // console.log("*************");
 console.log(studentList.updateAge("2015-105869", 25));
-// console.log(studentList.checkStudentId("2015-105870"));
+console.log(studentList.checkStudentId("2015-105870"));
 console.log(studentList.getStudents());
